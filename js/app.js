@@ -5,8 +5,10 @@
 
 window.VolumeChange = (volume) => {
     //debugger;
-    document.getElementById("pre").volume = volume;
-    document.getElementById("roar").volume = volume;
+    var pre = document.getElementById("pre");
+    if (pre !== null) pre.volume = volume;
+    var roar = document.getElementById("roar");
+    if (roar !== null) roar.volume = volume;
 }
 
 window.WakeLockMethod = () => {
